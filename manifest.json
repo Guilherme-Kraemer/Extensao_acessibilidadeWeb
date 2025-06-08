@@ -31,9 +31,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content/content.js"],
-      "css": ["content/content.css"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ],
       "run_at": "document_idle",
       "all_frames": false
     }
@@ -48,15 +54,15 @@
     },
     "increase-font": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Plus",
-        "mac": "Command+Shift+Plus"
+        "default": "Ctrl+Shift+Up",
+        "mac": "Command+Shift+Up"
       },
       "description": "Aumentar tamanho da fonte"
     },
     "decrease-font": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Minus",
-        "mac": "Command+Shift+Minus"
+        "default": "Ctrl+Shift+Down",
+        "mac": "Command+Shift+Down"
       },
       "description": "Diminuir tamanho da fonte"
     },
@@ -70,8 +76,12 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["welcome.html"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "welcome.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }
