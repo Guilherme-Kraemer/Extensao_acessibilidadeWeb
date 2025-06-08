@@ -65,7 +65,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
       
       chrome.tabs.sendMessage(tab.id, {
         action: 'readText',
-        text: info.selectionText
+        text: selectionText
       });
     }
   } catch (error) {
