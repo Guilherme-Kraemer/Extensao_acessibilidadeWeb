@@ -1,120 +1,285 @@
-/* Estilos para o modo de acessibilidade */
-.accessibility-mode {
-    font-family: Arial, sans-serif !important;
-    line-height: 1.6 !important;
-    max-width: 800px !important;
-    margin: 0 auto !important;
-    padding: 20px !important;
+/* Reset de estilos conflitantes quando acessibilidade está ativa */
+body.accessibility-simplified * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Container de conteúdo simplificado */
+#simplified-content-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', sans-serif !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  background: #ffffff !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 40px !important;
+  box-sizing: border-box !important;
+}
+
+#simplified-content-container * {
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#simplified-content-container h1,
+#simplified-content-container h2,
+#simplified-content-container h3,
+#simplified-content-container h4,
+#simplified-content-container h5,
+#simplified-content-container h6 {
+  font-weight: bold !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.5em !important;
+  color: #2c3e50 !important;
+}
+
+#simplified-content-container p,
+#simplified-content-container li {
+  margin-bottom: 1em !important;
+  text-align: left !important;
+}
+
+#simplified-content-container a {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+}
+
+#simplified-content-container a:hover,
+#simplified-content-container a:focus {
+  color: #0052a3 !important;
+  background-color: rgba(0, 102, 204, 0.1) !important;
+  outline: 2px solid #0066cc !important;
+  outline-offset: 2px !important;
+}
+
+#simplified-content-container img {
+  display: block !important;
+  margin: 20px auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+}
+
+#simplified-content-container figure {
+  margin: 30px 0 !important;
+  padding: 0 !important;
+}
+
+#simplified-content-container figcaption {
+  text-align: center !important;
+  font-style: italic !important;
+  color: #666 !important;
+  font-size: 0.9em !important;
+  margin-top: 10px !important;
+}
+
+/* Descrições de imagens */
+.accessibility-alt-text {
+  display: block !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  padding: 10px 15px !important;
+  margin: 10px 0 !important;
+  background-color: #e8f4f8 !important;
+  color: #333 !important;
+  border-left: 4px solid #2196F3 !important;
+  border-radius: 0 4px 4px 0 !important;
+  font-style: italic !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.accessibility-alt-text::before {
+  content: "ℹ️ " !important;
+  font-style: normal !important;
+  margin-right: 5px !important;
+}
+
+/* Destaque de leitura */
+.reading-highlight {
+  background-color: #ffeb3b !important;
+  color: #000 !important;
+  padding: 4px 6px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.4) !important;
+  position: relative !important;
+  z-index: 100 !important;
+  transition: all 0.3s ease !important;
+}
+
+.reading-highlight::before {
+  content: "▶" !important;
+  position: absolute !important;
+  left: -20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #ffc107 !important;
+  font-size: 16px !important;
+}
+
+/* Controles de voz */
+#accessibility-voice-control {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  background-color: #2196F3 !important;
+  color: white !important;
+  padding: 15px 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1) !important;
+  z-index: 2147483647 !important;
+  min-width: 320px !important;
+  animation: slideInUp 0.3s ease-out !important;
+}
+
+#accessibility-voice-control button {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#accessibility-voice-control button:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+#accessibility-voice-control button:active {
+  transform: translateY(0) !important;
+  box-shadow: none !important;
+}
+
+#accessibility-voice-control button:focus {
+  outline: 2px solid white !important;
+  outline-offset: 2px !important;
+}
+
+#accessibility-voice-control select {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  padding: 6px 10px !important;
+  border-radius: 4px !important;
+  border: none !important;
+  background-color: white !important;
+  color: #333 !important;
+  cursor: pointer !important;
+}
+
+#accessibility-voice-control select:focus {
+  outline: 2px solid white !important;
+  outline-offset: 2px !important;
+}
+
+#reading-progress {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  opacity: 0.9 !important;
+  margin-left: 10px !important;
+}
+
+/* Animações */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modo de alto contraste - sobrescreve tudo */
+body.high-contrast-mode,
+body.high-contrast-mode * {
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+body.high-contrast-mode a,
+body.high-contrast-mode a * {
+  color: #ffff00 !important;
+  text-decoration: underline !important;
+}
+
+body.high-contrast-mode a:hover,
+body.high-contrast-mode a:focus {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+}
+
+body.high-contrast-mode button,
+body.high-contrast-mode input[type="button"],
+body.high-contrast-mode input[type="submit"] {
+  background-color: #333333 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+}
+
+body.high-contrast-mode input,
+body.high-contrast-mode textarea,
+body.high-contrast-mode select {
+  background-color: #222222 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.high-contrast-mode img {
+  opacity: 0.8 !important;
+  filter: brightness(0.8) contrast(1.2) !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.high-contrast-mode .reading-highlight {
+  background-color: #00ff00 !important;
+  color: #000000 !important;
+  border: 2px solid #00ff00 !important;
+}
+
+/* Foco visível para navegação por teclado */
+*:focus-visible {
+  outline: 3px solid #ff0000 !important;
+  outline-offset: 2px !important;
+  z-index: 999999 !important;
+}
+
+/* Media queries para preferências do usuário */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Impressão */
+@media print {
+  #accessibility-voice-control,
+  .accessibility-alt-text::before {
+    display: none !important;
   }
   
-  /* Tamanhos de fonte */
-  .font-medium {
-    font-size: 18px !important;
+  .accessibility-alt-text {
+    border: 1px solid #000 !important;
+    background: none !important;
+    color: #000 !important;
   }
-  
-  .font-large {
-    font-size: 22px !important;
-  }
-  
-  .font-x-large {
-    font-size: 26px !important;
-  }
-  
-  /* Contrastes */
-  .contrast-normal {
-    color: #333 !important;
-    background-color: #fff !important;
-  }
-  
-  .contrast-high {
-    color: #fff !important;
-    background-color: #000 !important;
-  }
-  
-  .contrast-high a {
-    color: #ffff00 !important;
-    font-weight: bold !important;
-  }
-  
-  /* Estilos para textos alternativos de imagens */
-  .image-alt-text {
-    display: block;
-    font-style: italic;
-    margin: 5px 0;
-    padding: 5px;
-    background-color: #f0f0f0;
-    border-left: 3px solid #666;
-  }
-  
-  /* Estilos para destacar elementos importantes */
-  .accessibility-mode h1,
-  .accessibility-mode h2,
-  .accessibility-mode h3 {
-    margin: 0.8em 0 0.5em 0 !important;
-    padding: 0.3em 0 !important;
-    border-bottom: 2px solid #ddd !important;
-  }
-  
-  .accessibility-mode p {
-    margin: 0.7em 0 !important;
-    padding: 0 !important;
-  }
-  
-  .accessibility-mode a {
-    text-decoration: underline !important;
-    font-weight: bold !important;
-    padding: 0 3px !important;
-  }
-  
-  /* Estilos para destacar o elemento que está sendo lido */
-  .reading-highlight {
-    background-color: #ffff99 !important;
-    border-radius: 3px !important;
-  }
-  
-  /* Estilos para o overlay simplificado */
-  .simplified-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    z-index: 9999;
-    overflow-y: auto;
-    padding: 20px;
-  }
-  
-  /* Estilos do controle de leitura por voz */
-  .voice-control {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .voice-control button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-  }
-  
-  .voice-control button:hover {
-    background-color: rgba(255,255,255,0.2);
-  }
+}
