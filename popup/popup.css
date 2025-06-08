@@ -1,0 +1,137 @@
+/* Estilos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    width: 300px;
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #2c3e50;
+  }
+  
+  /* Estilos para os toggles */
+  .toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    background-color: white;
+    transition: transform 0.3s;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+  }
+  
+  /* Estilos para as opções */
+  .options {
+    margin-top: 15px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: white;
+  }
+  
+  /* Estilos para os botões */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  #apply-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  #apply-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  #reset-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  #reset-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+  }

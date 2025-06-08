@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade Web</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Acessibilidade Web</h1>
+    
+    <div class="toggle-container">
+      <label for="toggle-simplify">Simplificar Página</label>
+      <input type="checkbox" id="toggle-simplify" checked>
+    </div>
+    
+    <div class="options">
+      <h2>Opções</h2>
+      
+      <div class="option">
+        <label for="font-size">Tamanho da Fonte:</label>
+        <select id="font-size">
+          <option value="medium">Médio</option>
+          <option value="large">Grande</option>
+          <option value="x-large">Muito Grande</option>
+        </select>
+      </div>
+      
+      <div class="option">
+        <label for="contrast">Contraste:</label>
+        <select id="contrast">
+          <option value="normal">Normal</option>
+          <option value="high">Alto</option>
+        </select>
+      </div>
+      
+      <div class="toggle-container">
+        <label for="toggle-images-alt">Mostrar Texto Alternativo</label>
+        <input type="checkbox" id="toggle-images-alt" checked>
+      </div>
+      
+      <div class="toggle-container">
+        <label for="toggle-read-aloud">Leitura por Voz</label>
+        <input type="checkbox" id="toggle-read-aloud">
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button id="apply-btn">Aplicar</button>
+      <button id="reset-btn">Restaurar</button>
+    </div>
+    
+    <footer>
+      <p>Desenvolvido para o Projeto Integrador Extensionista</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

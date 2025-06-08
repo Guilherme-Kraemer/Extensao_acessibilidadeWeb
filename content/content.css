@@ -1,0 +1,120 @@
+/* Estilos para o modo de acessibilidade */
+.accessibility-mode {
+    font-family: Arial, sans-serif !important;
+    line-height: 1.6 !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+  
+  /* Tamanhos de fonte */
+  .font-medium {
+    font-size: 18px !important;
+  }
+  
+  .font-large {
+    font-size: 22px !important;
+  }
+  
+  .font-x-large {
+    font-size: 26px !important;
+  }
+  
+  /* Contrastes */
+  .contrast-normal {
+    color: #333 !important;
+    background-color: #fff !important;
+  }
+  
+  .contrast-high {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
+  
+  .contrast-high a {
+    color: #ffff00 !important;
+    font-weight: bold !important;
+  }
+  
+  /* Estilos para textos alternativos de imagens */
+  .image-alt-text {
+    display: block;
+    font-style: italic;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-left: 3px solid #666;
+  }
+  
+  /* Estilos para destacar elementos importantes */
+  .accessibility-mode h1,
+  .accessibility-mode h2,
+  .accessibility-mode h3 {
+    margin: 0.8em 0 0.5em 0 !important;
+    padding: 0.3em 0 !important;
+    border-bottom: 2px solid #ddd !important;
+  }
+  
+  .accessibility-mode p {
+    margin: 0.7em 0 !important;
+    padding: 0 !important;
+  }
+  
+  .accessibility-mode a {
+    text-decoration: underline !important;
+    font-weight: bold !important;
+    padding: 0 3px !important;
+  }
+  
+  /* Estilos para destacar o elemento que está sendo lido */
+  .reading-highlight {
+    background-color: #ffff99 !important;
+    border-radius: 3px !important;
+  }
+  
+  /* Estilos para o overlay simplificado */
+  .simplified-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  /* Estilos do controle de leitura por voz */
+  .voice-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .voice-control button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .voice-control button:hover {
+    background-color: rgba(255,255,255,0.2);
+  }
